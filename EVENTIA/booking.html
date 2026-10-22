@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قدمي طلب حجز مناسبة مع EVENTIA.">
+    <title>احجزي مناسبتك | EVENTIA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">EVENT<span>IA</span><i>✦</i></a>
+        <nav aria-label="القائمة الرئيسية">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="events.html">المناسبات والباقات</a>
+            <a class="nav-cta current" href="booking.html">احجزي مناسبتك</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <p class="eyebrow">LET'S PLAN SOMETHING BEAUTIFUL</p>
+            <h1>خلينا نخططوا لفرحتك <em>مع بعض.</em></h1>
+            <p>عبي البيانات الأساسية، واختاري المناسبة والباقة اللي تناسبك.</p>
+        </section>
+
+        <section class="booking-layout">
+
+            <aside class="booking-aside">
+                <p class="eyebrow">A LITTLE NOTE</p>
+                <h2>إنتِ عيشي اللحظة،<br><em>والتفاصيل علينا.</em></h2>
+                <p>كل ما تعطينا تفاصيل أكثر عن فكرتك، نقدروا نساعدوك تختاري الباقة الأنسب.</p>
+
+                <div class="aside-line">
+                    <span>✦</span>
+                    <div>
+                        <strong>خطوة بخطوة</strong>
+                        <small>اختاري المناسبة والباقة والتاريخ.</small>
+                    </div>
+                </div>
+
+                <div class="aside-line">
+                    <span>♡</span>
+                    <div>
+                        <strong>حسب ذوقك</strong>
+                        <small>أضيفي أي ملاحظات أو أفكار خاصة.</small>
+                    </div>
+                </div>
+
+                <div class="aside-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=85"
+                        alt="تنسيق طاولة مناسبة بورود ناعمة"
+                        loading="lazy">
+                </div>
+            </aside>
+
+            <section class="form-panel">
+                <p class="eyebrow">BOOKING FORM / نموذج الحجز</p>
+                <h2>احكيلنا على مناسبتك</h2>
+                <p class="form-intro">الحقول المعلّمة بنجمة (*) مطلوبة.</p>
+
+                <form id="bookingForm">
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">الاسم الكامل *</label>
+                            <input id="name" name="name" type="text" required autocomplete="name" placeholder="اسمك الكامل">
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="09X XXX XXXX">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">البريد الإلكتروني *</label>
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="event">نوع المناسبة *</label>
+                            <select id="event" name="event" required>
+                                <option value="">اختاري المناسبة</option>
+                                <option value="wedding">ليلة العمر</option>
+                                <option value="birthday">عيد الميلاد</option>
+                                <option value="graduation">التخرج</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="package">الباقة *</label>
+                            <select id="package" name="package" required disabled>
+                                <option value="">اختاري المناسبة أولاً</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p id="price" class="price-info" aria-live="polite">
+                        السعر المبدئي يظهر بعد اختيار الباقة.
+                    </p>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="date">تاريخ المناسبة *</label>
+                            <input id="date" name="date" type="date" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="guests">عدد الضيوف</label>
+                            <input id="guests" name="guests" type="number" min="1" max="10000" placeholder="مثلاً 100">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="location">مكان المناسبة</label>
+                        <input id="location" name="location" type="text" placeholder="المدينة أو القاعة (اختياري)">
+                    </div>
+
+                    <div class="field">
+                        <label for="notes">تفاصيل إضافية</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="الألوان، الثيم، أو أي فكرة في بالك..."></textarea>
+                    </div>
+
+                    <button class="button submit-button" type="submit">
+                        تأكيد الطلب التجريبي <b>↗️</b>
+                    </button>
+
+                    <p id="message" role="status" aria-live="polite"></p>
+
+                    <p class="form-note">
+                        هذا نموذج تعليمي للتجربة فقط؛ لا يتم إرسال أو تخزين بياناتك فعلياً.
+                    </p>
+                </form>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="brand brand-footer" href="index.html">EVENT<span>IA</span><i>✦</i></a>
+        <p>حيث تبدأ مناسبتك، وتبقى ذكراها.</p>
+
+        <div class="footer-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="events.html">الباقات</a>
+            <a href="booking.html">الحجز</a>
+        </div>
+
+        <small>© 2026 EVENTIA — جميع الحقوق محفوظة</small>
+    </footer>
+
+</body>
+</html>
